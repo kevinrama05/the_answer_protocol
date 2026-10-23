@@ -1,4 +1,4 @@
-*This activity has been created as part of the 42 curriculum by ekrama10, <login2>[, <login3>].*
+*This activity has been created as part of the 42 curriculum by kerama*
 
 # TAP: The Answer Protocol
 
