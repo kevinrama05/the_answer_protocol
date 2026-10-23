@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TAP Client</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Login --------------------------------------------------------------->
+<section id="login" class="login">
+  <form id="login-form" class="card login-card">
+    <h1>The Answer Protocol</h1>
+    <p class="muted">A shared-world retro text adventure</p>
+    <label>Server host <input id="in-host" required></label>
+    <label>Server port <input id="in-port" required inputmode="numeric"></label>
+    <label>Username <input id="in-name" required maxlength="24" autocomplete="off" placeholder="alice"></label>
+    <button type="submit" class="primary">Connect</button>
+    <p id="login-error" class="error"></p>
+  </form>
+</section>
+
+<!-- Game ---------------------------------------------------------------->
+<main id="game" class="game hidden">
+  <header class="topbar">
+    <div class="brand">TAP</div>
+    <div id="who-me" class="me"></div>
+    <div class="hp">
+      <span>HP</span>
+      <div class="hpbar"><div id="hp-fill"></div></div>
+      <span id="hp-text">–</span>
+      <span id="hp-status" class="badge">–</span>
+    </div>
+    <div class="counters">
+      <span title="Players in this room">Room <b id="count-room">0</b></span>
+      <span title="Players on the server">Server <b id="count-server">0</b></span>
+    </div>
+    <button id="btn-quit" class="danger">QUIT</button>
+  </header>
+
+  <!-- Action bar: one button per protocol command -->
+  <section class="actions card">
+    <input id="target" placeholder="Target: item / NPC / player / direction (ID or name)" autocomplete="off">
+    <div class="buttons">
+      <button data-cmd="LOOK">LOOK</button>
+      <button data-cmd="MOVE" data-needs="direction">MOVE</button>
+      <button data-cmd="TAKE" data-needs="item">TAKE</button>
+      <button data-cmd="DROP" data-needs="item">DROP</button>
+      <button data-cmd="TALK" data-needs="NPC">TALK</button>
+      <button data-cmd="ATTACK" data-needs="NPC" class="danger">ATTACK</button>
+      <button data-cmd="DEFEND">DEFEND</button>
+      <button data-cmd="FLEE">FLEE</button>
+      <button data-cmd="USE" data-needs="item">USE</button>
+      <button data-cmd="STATUS">STATUS</button>
+      <button data-cmd="QUEST" data-needs="NPC">QUEST</button>
+      <button data-cmd="QUESTS">QUESTS</button>
+      <button data-cmd="WHO">WHO</button>
+      <button data-cmd="INVENTORY">INVENTORY</button>
+      <button data-cmd="GROUP" data-needs="sub-command (CREATE, INVITE bob, JOIN alice, LEAVE)">GROUP</button>
+    </div>
+  </section>
+
+  <div class="columns">
+    <!-- Room -->
+    <section class="col">
+      <div class="card">
+        <h2 id="room-name">–</h2>
+        <div id="room-id" class="muted small"></div>
+        <p id="room-desc"></p>
+        <h3>Exits</h3>
+        <div id="exits" class="compass"></div>
+        <div id="exits-extra" class="chips"></div>
+      </div>
+      <div class="card">
+        <h3>Items here</h3>
+        <ul id="room-items" class="list"></ul>
+      </div>
+      <div class="card">
+        <h3>Characters</h3>
+        <ul id="room-npcs" class="list"></ul>
+      </div>
+      <div class="card">
+        <h3>Players here</h3>
+        <ul id="room-players" class="list"></ul>
+      </div>
+    </section>
+
+    <!-- Dialogue, chat and log -->
+    <section class="col wide">
+      <div id="dialogue" class="card dialogue hidden">
+        <div class="speaker" id="dialogue-npc"></div>
+        <div class="speech" id="dialogue-text"></div>
+      </div>
+      <div class="card chat">
+        <div class="tabs" id="chat-tabs">
+          <button data-tab="GLOBAL" class="active">Global <span class="unread"></span></button>
+          <button data-tab="ROOM">Room <span class="unread"></span></button>
+          <button data-tab="GROUP">Group <span class="unread"></span></button>
+        </div>
+        <div id="chat-log" class="scroll chatlog"></div>
+        <form id="chat-form" class="row">
+          <input id="chat-input" placeholder="Message to Global" autocomplete="off" maxlength="900">
+          <button type="submit" class="primary">Send</button>
+        </form>
+      </div>
+      <div class="card log">
+        <div class="row between">
+          <h3>Log</h3>
+          <label class="small"><input type="checkbox" id="show-auto" checked> show automatic refreshes</label>
+        </div>
+        <div id="log" class="scroll mono"></div>
+        <form id="raw-form" class="row">
+          <input id="raw-input" class="mono" placeholder="Raw protocol command, e.g. MOVE north" autocomplete="off">
+          <button type="submit">Send raw</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Player -->
+    <section class="col">
+      <div class="card">
+        <h3>Status</h3>
+        <div id="status" class="small"></div>
+        <div class="row">
+          <button data-cmd="DEFEND">Defend</button>
+          <button data-cmd="FLEE">Flee</button>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Inventory</h3>
+        <ul id="inventory" class="list"></ul>
+      </div>
+      <div class="card">
+        <h3>Quests</h3>
+        <ul id="quests" class="list"></ul>
+      </div>
+      <div class="card">
+        <h3>Group</h3>
+        <div id="group-info" class="small muted">Not in a group.</div>
+        <ul id="group-members" class="list"></ul>
+        <div class="row"><button id="g-create">Create</button><button id="g-leave">Leave</button></div>
+        <div class="row"><input id="g-invite" placeholder="player"><button id="g-invite-btn">Invite</button></div>
+        <ul id="invites" class="list"></ul>
+      </div>
+    </section>
+  </div>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

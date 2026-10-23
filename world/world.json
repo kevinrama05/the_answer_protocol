@@ -1,0 +1,1109 @@
+{
+  "world": {
+    "id": "world.novaris",
+    "name": "Novaris: The Buried City",
+    "description": "A shared-world adventure set in the fortified city of Novaris and the forgotten ruins beneath it.",
+    "spawn_room": "loc.novaris_gate",
+    "safe_room": "loc.temple_hall",
+    "rooms": {
+      "loc.novaris_gate": {
+        "name": "Novaris Gate",
+        "description": "The eastern gate of Novaris, where caravans and travelers enter the city.",
+        "exits": {
+          "west": "loc.market_square",
+          "north": "loc.watch_post",
+          "south": "loc.blacksmith"
+        },
+        "items": [
+          "item.novaris_coins"
+        ],
+        "npcs": []
+      },
+      "loc.watch_post": {
+        "name": "East Watch Post",
+        "description": "A stone guard post overlooking the road beyond the city walls.",
+        "exits": {
+          "south": "loc.novaris_gate",
+          "west": "loc.guard_barracks"
+        },
+        "items": [
+          "item.old_map"
+        ],
+        "npcs": []
+      },
+      "loc.guard_barracks": {
+        "name": "Guard Barracks",
+        "description": "A busy barracks filled with weapon racks, maps, and tired city guards.",
+        "exits": {
+          "east": "loc.watch_post",
+          "south": "loc.market_square",
+          "west": "loc.training_yard"
+        },
+        "items": [
+          "item.guard_armor"
+        ],
+        "npcs": [
+          "npc.captain_elian"
+        ]
+      },
+      "loc.training_yard": {
+        "name": "Training Yard",
+        "description": "An open yard where recruits practice with wooden weapons.",
+        "exits": {
+          "east": "loc.guard_barracks",
+          "south": "loc.merchant_row"
+        },
+        "items": [
+          "item.training_sword"
+        ],
+        "npcs": [
+          "npc.recruit_mara"
+        ]
+      },
+      "loc.market_square": {
+        "name": "Market Square",
+        "description": "The crowded heart of Novaris, surrounded by merchants and narrow streets.",
+        "exits": {
+          "east": "loc.novaris_gate",
+          "north": "loc.guard_barracks",
+          "west": "loc.merchant_row",
+          "south": "loc.fountain_plaza"
+        },
+        "items": [],
+        "npcs": []
+      },
+      "loc.merchant_row": {
+        "name": "Merchant Row",
+        "description": "A covered street packed with stalls selling food, cloth, maps, and curiosities.",
+        "exits": {
+          "north": "loc.training_yard",
+          "east": "loc.market_square",
+          "west": "loc.bakery",
+          "south": "loc.tavern"
+        },
+        "items": [
+          "item.rope"
+        ],
+        "npcs": [
+          "npc.lyra_the_merchant"
+        ]
+      },
+      "loc.bakery": {
+        "name": "Golden Crust Bakery",
+        "description": "The warm scent of fresh bread fills this small but popular bakery.",
+        "exits": {
+          "east": "loc.merchant_row",
+          "south": "loc.residential_lane"
+        },
+        "items": [
+          "item.fresh_bread"
+        ],
+        "npcs": [
+          "npc.baker_toma"
+        ]
+      },
+      "loc.tavern": {
+        "name": "The Copper Tankard",
+        "description": "A lively tavern where travelers trade rumors beside a crackling hearth.",
+        "exits": {
+          "north": "loc.merchant_row",
+          "west": "loc.residential_lane",
+          "east": "loc.fountain_plaza",
+          "south": "loc.garden_gate"
+        },
+        "items": [
+          "item.tavern_key"
+        ],
+        "npcs": [
+          "npc.innkeeper_sela"
+        ]
+      },
+      "loc.blacksmith": {
+        "name": "Iron Ember Smithy",
+        "description": "Sparks fly from the forge as weapons and tools are repaired.",
+        "exits": {
+          "west": "loc.fountain_plaza",
+          "north": "loc.novaris_gate",
+          "south": "loc.cemetery_gate"
+        },
+        "items": [
+          "item.iron_shield"
+        ],
+        "npcs": [
+          "npc.blacksmith_borin"
+        ]
+      },
+      "loc.fountain_plaza": {
+        "name": "Fountain Plaza",
+        "description": "A peaceful plaza centered around an old marble fountain.",
+        "exits": {
+          "west": "loc.tavern",
+          "north": "loc.market_square",
+          "east": "loc.blacksmith",
+          "south": "loc.temple_steps"
+        },
+        "items": [],
+        "npcs": []
+      },
+      "loc.garden_gate": {
+        "name": "Royal Garden Gate",
+        "description": "An iron gate opens toward the gardens of the old royal quarter.",
+        "exits": {
+          "north": "loc.tavern",
+          "east": "loc.temple_steps",
+          "south": "loc.royal_gardens",
+          "west": "loc.old_library"
+        },
+        "items": [],
+        "npcs": []
+      },
+      "loc.residential_lane": {
+        "name": "Residential Lane",
+        "description": "A quiet lane lined with homes, laundry lines, and small workshops.",
+        "exits": {
+          "north": "loc.bakery",
+          "east": "loc.tavern",
+          "south": "loc.old_library",
+          "west": "loc.alley_of_whispers"
+        },
+        "items": [],
+        "npcs": []
+      },
+      "loc.temple_steps": {
+        "name": "Temple Steps",
+        "description": "Wide worn steps descend toward the ancient Temple of the Dawn.",
+        "exits": {
+          "north": "loc.fountain_plaza",
+          "west": "loc.garden_gate",
+          "south": "loc.temple_hall",
+          "east": "loc.cemetery_gate"
+        },
+        "items": [],
+        "npcs": []
+      },
+      "loc.temple_hall": {
+        "name": "Temple Hall",
+        "description": "Sunlight falls through colored glass onto rows of silent stone benches.",
+        "exits": {
+          "north": "loc.temple_steps",
+          "east": "loc.healer_room",
+          "down": "loc.crypt_entrance"
+        },
+        "items": [
+          "item.temple_medallion"
+        ],
+        "npcs": [
+          "npc.priest_oren"
+        ]
+      },
+      "loc.healer_room": {
+        "name": "Healer's Chamber",
+        "description": "Shelves of herbs and bandages surround a clean treatment table.",
+        "exits": {
+          "west": "loc.temple_hall",
+          "north": "loc.cemetery_gate"
+        },
+        "items": [
+          "item.healers_potion"
+        ],
+        "npcs": [
+          "npc.healer_aria"
+        ]
+      },
+      "loc.crypt_entrance": {
+        "name": "Forgotten Crypt Entrance",
+        "description": "A cracked stairway leads beneath the temple into darkness.",
+        "exits": {
+          "up": "loc.temple_hall",
+          "south": "loc.crypt_hall"
+        },
+        "items": [],
+        "npcs": []
+      },
+      "loc.crypt_hall": {
+        "name": "Crypt Hall",
+        "description": "Ancient stone coffins line a cold underground corridor.",
+        "exits": {
+          "north": "loc.crypt_entrance",
+          "east": "loc.crypt_chamber",
+          "south": "loc.smugglers_tunnel"
+        },
+        "items": [],
+        "npcs": []
+      },
+      "loc.crypt_chamber": {
+        "name": "Crypt Chamber",
+        "description": "A sealed chamber containing the remains of long-forgotten nobles.",
+        "exits": {
+          "west": "loc.crypt_hall",
+          "south": "loc.sewer_junction"
+        },
+        "items": [
+          "item.crypt_key"
+        ],
+        "npcs": []
+      },
+      "loc.cemetery_gate": {
+        "name": "Cemetery Gate",
+        "description": "An iron gate marks the entrance to the city's old cemetery.",
+        "exits": {
+          "west": "loc.temple_steps",
+          "north": "loc.blacksmith",
+          "south": "loc.healer_room",
+          "east": "loc.cemetery"
+        },
+        "items": [],
+        "npcs": []
+      },
+      "loc.cemetery": {
+        "name": "Old Cemetery",
+        "description": "Weathered headstones stand beneath twisted trees and creeping mist.",
+        "exits": {
+          "west": "loc.cemetery_gate",
+          "south": "loc.abandoned_chapel"
+        },
+        "items": [
+          "item.healing_herbs"
+        ],
+        "npcs": [
+          "npc.gravekeeper_nolan"
+        ]
+      },
+      "loc.abandoned_chapel": {
+        "name": "Abandoned Chapel",
+        "description": "A ruined chapel whose broken roof reveals the night sky.",
+        "exits": {
+          "north": "loc.cemetery"
+        },
+        "items": [],
+        "npcs": []
+      },
+      "loc.royal_gardens": {
+        "name": "Royal Gardens",
+        "description": "Overgrown paths wind between statues, fountains, and flowering trees.",
+        "exits": {
+          "north": "loc.garden_gate",
+          "south": "loc.garden_maze"
+        },
+        "items": [],
+        "npcs": [
+          "npc.gardener_elin"
+        ]
+      },
+      "loc.garden_maze": {
+        "name": "Garden Maze",
+        "description": "Tall hedges form confusing passages around a hidden central shrine.",
+        "exits": {
+          "north": "loc.royal_gardens",
+          "west": "loc.maze_shrine"
+        },
+        "items": [],
+        "npcs": []
+      },
+      "loc.maze_shrine": {
+        "name": "Moonlit Shrine",
+        "description": "A small shrine illuminated by pale light even during the day.",
+        "exits": {
+          "east": "loc.garden_maze",
+          "west": "loc.riverside_path"
+        },
+        "items": [],
+        "npcs": []
+      },
+      "loc.old_library": {
+        "name": "Old Library",
+        "description": "Dusty shelves preserve records from before the founding of modern Novaris.",
+        "exits": {
+          "north": "loc.residential_lane",
+          "east": "loc.garden_gate",
+          "south": "loc.riverside_path"
+        },
+        "items": [
+          "item.library_note"
+        ],
+        "npcs": [
+          "npc.librarian_ves"
+        ]
+      },
+      "loc.alley_of_whispers": {
+        "name": "Alley of Whispers",
+        "description": "A narrow alley where every sound seems louder than it should be.",
+        "exits": {
+          "east": "loc.residential_lane",
+          "west": "loc.hidden_door"
+        },
+        "items": [],
+        "npcs": [
+          "npc.the_whisper"
+        ]
+      },
+      "loc.hidden_door": {
+        "name": "Hidden Door",
+        "description": "A concealed doorway behind stacked crates leads into the undercity.",
+        "exits": {
+          "east": "loc.alley_of_whispers",
+          "down": "loc.smugglers_tunnel"
+        },
+        "items": [],
+        "npcs": []
+      },
+      "loc.smugglers_tunnel": {
+        "name": "Smugglers' Tunnel",
+        "description": "A damp tunnel once used to move goods beneath the city walls.",
+        "exits": {
+          "east": "loc.sewer_junction",
+          "north": "loc.crypt_hall",
+          "up": "loc.hidden_door"
+        },
+        "items": [],
+        "npcs": [
+          "npc.smuggler_vex"
+        ]
+      },
+      "loc.riverside_path": {
+        "name": "Riverside Path",
+        "description": "A stone path follows the river beneath the western district.",
+        "exits": {
+          "north": "loc.old_library",
+          "east": "loc.maze_shrine",
+          "south": "loc.docks"
+        },
+        "items": [],
+        "npcs": []
+      },
+      "loc.docks": {
+        "name": "Novaris Docks",
+        "description": "Cargo ships and fishing boats crowd the wooden piers.",
+        "exits": {
+          "north": "loc.riverside_path",
+          "east": "loc.warehouse",
+          "south": "loc.lighthouse_road"
+        },
+        "items": [
+          "item.fishing_net"
+        ],
+        "npcs": [
+          "npc.dockmaster_ren"
+        ]
+      },
+      "loc.warehouse": {
+        "name": "Old Warehouse",
+        "description": "A large warehouse containing crates, ropes, and suspicious locked containers.",
+        "exits": {
+          "west": "loc.docks",
+          "south": "loc.lighthouse",
+          "down": "loc.sewer_junction"
+        },
+        "items": [
+          "item.blacksmith_hammer"
+        ],
+        "npcs": []
+      },
+      "loc.lighthouse_road": {
+        "name": "Lighthouse Road",
+        "description": "A coastal road leading away from the city toward a lonely lighthouse.",
+        "exits": {
+          "north": "loc.docks",
+          "east": "loc.lighthouse",
+          "west": "loc.west_gate"
+        },
+        "items": [],
+        "npcs": []
+      },
+      "loc.lighthouse": {
+        "name": "Grey Beacon Lighthouse",
+        "description": "A tall lighthouse whose keeper watches the sea from above.",
+        "exits": {
+          "west": "loc.lighthouse_road",
+          "north": "loc.warehouse",
+          "south": "loc.ruined_tower"
+        },
+        "items": [
+          "item.lighthouse_lens"
+        ],
+        "npcs": [
+          "npc.lighthouse_keeper_ira"
+        ]
+      },
+      "loc.west_gate": {
+        "name": "West Gate",
+        "description": "The western gate opens toward the hills and the old forest road.",
+        "exits": {
+          "east": "loc.lighthouse_road",
+          "south": "loc.forest_road"
+        },
+        "items": [],
+        "npcs": []
+      },
+      "loc.forest_road": {
+        "name": "Forest Road",
+        "description": "An old road disappears into dense forest beyond the safety of the walls.",
+        "exits": {
+          "north": "loc.west_gate",
+          "south": "loc.bandit_camp"
+        },
+        "items": [],
+        "npcs": [
+          "npc.bandit_scout"
+        ]
+      },
+      "loc.bandit_camp": {
+        "name": "Bandit Camp",
+        "description": "A hidden camp with abandoned tents and a smoking fire pit.",
+        "exits": {
+          "north": "loc.forest_road",
+          "east": "loc.ruined_tower"
+        },
+        "items": [
+          "item.bandit_shield"
+        ],
+        "npcs": [
+          "npc.bandit_leader_karg"
+        ]
+      },
+      "loc.ruined_tower": {
+        "name": "Ruined Tower",
+        "description": "The remains of a watchtower rise above the surrounding forest.",
+        "exits": {
+          "west": "loc.bandit_camp",
+          "north": "loc.lighthouse",
+          "east": "loc.cave_entrance"
+        },
+        "items": [],
+        "npcs": []
+      },
+      "loc.cave_entrance": {
+        "name": "Cave Entrance",
+        "description": "Cold air flows from a jagged opening in the hillside.",
+        "exits": {
+          "west": "loc.ruined_tower",
+          "down": "loc.deep_cave"
+        },
+        "items": [],
+        "npcs": []
+      },
+      "loc.deep_cave": {
+        "name": "Deep Cave",
+        "description": "Underground water echoes through a vast natural cavern.",
+        "exits": {
+          "up": "loc.cave_entrance",
+          "west": "loc.crystal_cavern",
+          "north": "loc.underground_lake"
+        },
+        "items": [],
+        "npcs": [
+          "npc.cave_stalker"
+        ]
+      },
+      "loc.crystal_cavern": {
+        "name": "Crystal Cavern",
+        "description": "Glowing crystals illuminate the cavern with an eerie shimmer.",
+        "exits": {
+          "east": "loc.deep_cave"
+        },
+        "items": [
+          "item.crystal_shard"
+        ],
+        "npcs": []
+      },
+      "loc.sewer_junction": {
+        "name": "Sewer Junction",
+        "description": "Several ancient tunnels meet beneath Novaris; the water is dark and fast.",
+        "exits": {
+          "north": "loc.crypt_chamber",
+          "west": "loc.smugglers_tunnel",
+          "up": "loc.warehouse",
+          "east": "loc.flooded_sewer",
+          "south": "loc.undercity_ruins"
+        },
+        "items": [],
+        "npcs": []
+      },
+      "loc.flooded_sewer": {
+        "name": "Flooded Sewer",
+        "description": "A partially flooded branch of the undercity hides dangerous creatures.",
+        "exits": {
+          "west": "loc.sewer_junction",
+          "south": "loc.underground_lake"
+        },
+        "items": [],
+        "npcs": [
+          "npc.giant_sewer_rat"
+        ]
+      },
+      "loc.underground_lake": {
+        "name": "Underground Lake",
+        "description": "A silent black lake stretches beneath the foundations of the city.",
+        "exits": {
+          "north": "loc.flooded_sewer",
+          "west": "loc.undercity_ruins",
+          "south": "loc.deep_cave"
+        },
+        "items": [],
+        "npcs": []
+      },
+      "loc.undercity_ruins": {
+        "name": "Undercity Ruins",
+        "description": "The buried remains of an older settlement lie beneath Novaris.",
+        "exits": {
+          "east": "loc.underground_lake",
+          "north": "loc.sewer_junction",
+          "west": "loc.ancient_vault"
+        },
+        "items": [
+          "item.ancient_relic"
+        ],
+        "npcs": [
+          "npc.ruined_guardian"
+        ]
+      },
+      "loc.ancient_vault": {
+        "name": "Ancient Vault",
+        "description": "A sealed vault containing relics from a civilization older than the city.",
+        "exits": {
+          "east": "loc.undercity_ruins"
+        },
+        "items": [
+          "item.vault_seal"
+        ],
+        "npcs": [
+          "npc.vault_sentinel"
+        ]
+      }
+    },
+    "items": {
+      "item.novaris_coins": {
+        "name": "Novaris Coins",
+        "description": "A pouch of minted silver coins used as currency.",
+        "category": "Currency",
+        "obtainable": true,
+        "value": 25
+      },
+      "item.guard_sword": {
+        "name": "Guard Sword",
+        "description": "A reliable iron sword issued to city guards.",
+        "category": "Weapon",
+        "obtainable": true,
+        "damage": 12
+      },
+      "item.training_sword": {
+        "name": "Training Sword",
+        "description": "A blunt wooden sword for practice.",
+        "category": "Weapon",
+        "obtainable": true,
+        "damage": 4
+      },
+      "item.iron_shield": {
+        "name": "Iron Shield",
+        "description": "A round shield that can block part of an incoming attack.",
+        "category": "Shield",
+        "obtainable": true,
+        "defense": 4
+      },
+      "item.healing_herbs": {
+        "name": "Healing Herbs",
+        "description": "A bundle of medicinal herbs useful to the city healer.",
+        "category": "Consumable",
+        "obtainable": true,
+        "heal": 15
+      },
+      "item.fresh_bread": {
+        "name": "Fresh Bread",
+        "description": "Warm bread from the Golden Crust Bakery.",
+        "category": "Consumable",
+        "obtainable": true,
+        "heal": 10
+      },
+      "item.blacksmith_hammer": {
+        "name": "Blacksmith Hammer",
+        "description": "A heavy hammer used for shaping hot metal.",
+        "category": "Tool",
+        "obtainable": true,
+        "damage": 8
+      },
+      "item.tavern_key": {
+        "name": "Tavern Key",
+        "description": "A brass key that opens a locked cellar door.",
+        "category": "Key",
+        "obtainable": true
+      },
+      "item.old_map": {
+        "name": "Old Map",
+        "description": "A worn map showing several forgotten passages.",
+        "category": "Quest Item",
+        "obtainable": true
+      },
+      "item.library_note": {
+        "name": "Library Note",
+        "description": "A note describing the location of an ancient vault.",
+        "category": "Quest Item",
+        "obtainable": true
+      },
+      "item.temple_medallion": {
+        "name": "Temple Medallion",
+        "description": "A bronze medallion marked with the symbol of the Dawn.",
+        "category": "Quest Item",
+        "obtainable": true
+      },
+      "item.crypt_key": {
+        "name": "Crypt Key",
+        "description": "An old iron key found near the sealed crypts.",
+        "category": "Key",
+        "obtainable": true
+      },
+      "item.bandit_dagger": {
+        "name": "Bandit Dagger",
+        "description": "A short dagger carried by forest bandits.",
+        "category": "Weapon",
+        "obtainable": true,
+        "damage": 7
+      },
+      "item.bandit_shield": {
+        "name": "Bandit Buckler",
+        "description": "A small shield made from reinforced wood.",
+        "category": "Shield",
+        "obtainable": true,
+        "defense": 2
+      },
+      "item.smugglers_manifest": {
+        "name": "Smugglers Manifest",
+        "description": "A list of illegal shipments moving through the docks.",
+        "category": "Quest Item",
+        "obtainable": true
+      },
+      "item.warehouse_key": {
+        "name": "Warehouse Key",
+        "description": "A rusted key to a locked warehouse chest.",
+        "category": "Key",
+        "obtainable": true
+      },
+      "item.fishing_net": {
+        "name": "Fishing Net",
+        "description": "A sturdy net used by the dock workers.",
+        "category": "Tool",
+        "obtainable": true
+      },
+      "item.lighthouse_lens": {
+        "name": "Lighthouse Lens",
+        "description": "A damaged lens that the keeper wants repaired.",
+        "category": "Quest Item",
+        "obtainable": true
+      },
+      "item.crystal_shard": {
+        "name": "Crystal Shard",
+        "description": "A glowing fragment from the Crystal Cavern.",
+        "category": "Miscellaneous",
+        "obtainable": true
+      },
+      "item.ancient_relic": {
+        "name": "Ancient Relic",
+        "description": "A valuable artifact recovered from the undercity.",
+        "category": "Miscellaneous",
+        "obtainable": true
+      },
+      "item.vault_seal": {
+        "name": "Vault Seal",
+        "description": "A stone seal engraved with symbols from the old civilization.",
+        "category": "Quest Item",
+        "obtainable": false
+      },
+      "item.guard_armor": {
+        "name": "Guard Armor",
+        "description": "Heavy protective armor unsuitable for quick movement.",
+        "category": "Armor",
+        "obtainable": false,
+        "defense": 6
+      },
+      "item.mysterious_orb": {
+        "name": "Mysterious Orb",
+        "description": "A strange orb humming with faint energy.",
+        "category": "Miscellaneous",
+        "obtainable": true
+      },
+      "item.rope": {
+        "name": "Rope",
+        "description": "Useful for climbing, pulling, or securing objects.",
+        "category": "Tool",
+        "obtainable": true
+      },
+      "item.healers_potion": {
+        "name": "Healers Potion",
+        "description": "A prepared medicine kept by the temple healer.",
+        "category": "Consumable",
+        "obtainable": true,
+        "heal": 40
+      }
+    },
+    "npcs": {
+      "npc.captain_elian": {
+        "name": "Captain Elian",
+        "description": "The disciplined commander of Novaris' city guard.",
+        "role": "dialogue",
+        "room": "loc.guard_barracks",
+        "dialogue": [
+          "Keep the city safe. Trouble often begins where nobody is watching.",
+          "Bread from Toma? Bless that baker."
+        ]
+      },
+      "npc.recruit_mara": {
+        "name": "Recruit Mara",
+        "description": "A young guard learning the rules of combat.",
+        "role": "dialogue",
+        "room": "loc.training_yard",
+        "dialogue": [
+          "One day I will earn a real guard's sword."
+        ]
+      },
+      "npc.baker_toma": {
+        "name": "Baker Toma",
+        "description": "A cheerful baker worried about missing herb deliveries.",
+        "role": "quest_giver",
+        "room": "loc.bakery",
+        "dialogue": [
+          "Captain Elian has not eaten all day. Could you bring him some Fresh Bread?",
+          "If you see Healing Herbs, Healer Aria needs them more than I do."
+        ],
+        "quest": "quest.bread_delivery"
+      },
+      "npc.lyra_the_merchant": {
+        "name": "Lyra the Merchant",
+        "description": "A traveling merchant with an eye for valuable curiosities.",
+        "role": "merchant",
+        "room": "loc.merchant_row",
+        "dialogue": [
+          "Coins speak clearly, but rare relics can say even more."
+        ]
+      },
+      "npc.blacksmith_borin": {
+        "name": "Borin Ironhand",
+        "description": "A master blacksmith who values good ore and honest work.",
+        "role": "quest_giver",
+        "room": "loc.blacksmith",
+        "dialogue": [
+          "Bring me proper tools and I can forge something worthy."
+        ],
+        "quest": "quest.forge_supplies"
+      },
+      "npc.innkeeper_sela": {
+        "name": "Innkeeper Sela",
+        "description": "The tavern keeper who hears every rumor in town.",
+        "role": "dialogue",
+        "room": "loc.tavern",
+        "dialogue": [
+          "Rumors are free here. Believing them may cost you."
+        ]
+      },
+      "npc.healer_aria": {
+        "name": "Healer Aria",
+        "description": "A temple healer searching for medicinal herbs.",
+        "role": "quest_giver",
+        "room": "loc.healer_room",
+        "dialogue": [
+          "The city needs Healing Herbs. Bring them to me and I can prepare medicine.",
+          "Herbs, bread or potions: anything you USE in a fight will help you survive."
+        ],
+        "quest": "quest.herbal_remedy"
+      },
+      "npc.priest_oren": {
+        "name": "Priest Oren",
+        "description": "An elderly priest guarding the temple's history.",
+        "role": "dialogue",
+        "room": "loc.temple_hall",
+        "dialogue": [
+          "The stones below this temple remember more than the people above."
+        ]
+      },
+      "npc.gravekeeper_nolan": {
+        "name": "Gravekeeper Nolan",
+        "description": "A quiet caretaker who knows the cemetery better than anyone.",
+        "role": "dialogue",
+        "room": "loc.cemetery",
+        "dialogue": [
+          "Some doors are better left closed, especially in the crypts."
+        ]
+      },
+      "npc.librarian_ves": {
+        "name": "Librarian Ves",
+        "description": "A scholar obsessed with records of the buried undercity.",
+        "role": "quest_giver",
+        "room": "loc.old_library",
+        "dialogue": [
+          "The old records point toward an undercity. Find the missing archive."
+        ],
+        "quest": "quest.lost_archive"
+      },
+      "npc.gardener_elin": {
+        "name": "Gardener Elin",
+        "description": "A royal gardener tending plants that have outlived the monarchy.",
+        "role": "dialogue",
+        "room": "loc.royal_gardens",
+        "dialogue": [
+          "These gardens have survived kings, wars, and neglect."
+        ]
+      },
+      "npc.the_whisper": {
+        "name": "The Whisper",
+        "description": "A suspicious informant who appears briefly in the alley.",
+        "role": "dialogue",
+        "room": "loc.alley_of_whispers",
+        "dialogue": [
+          "The smugglers move beneath your feet. Follow the wrong shadow and you may find them."
+        ]
+      },
+      "npc.smuggler_vex": {
+        "name": "Vex",
+        "description": "A smuggler guarding the route beneath the city.",
+        "role": "enemy",
+        "room": "loc.smugglers_tunnel",
+        "stats": {
+          "hp": 45,
+          "max_hp": 45,
+          "damage": 9
+        },
+        "dialogue": [
+          "Turn around, or the tunnel becomes your grave."
+        ],
+        "drops": [
+          "item.smugglers_manifest"
+        ]
+      },
+      "npc.dockmaster_ren": {
+        "name": "Dockmaster Ren",
+        "description": "The person responsible for cargo and ship schedules.",
+        "role": "quest_giver",
+        "room": "loc.docks",
+        "dialogue": [
+          "A manifest vanished with one of my shipments. Vex knows something about it."
+        ],
+        "quest": "quest.smugglers_manifest"
+      },
+      "npc.lighthouse_keeper_ira": {
+        "name": "Lighthouse Keeper Ira",
+        "description": "A lonely keeper trying to repair the Grey Beacon.",
+        "role": "quest_giver",
+        "room": "loc.lighthouse",
+        "dialogue": [
+          "The beacon is failing. A Crystal Shard may help focus its light.",
+          "Ren's docks must be safe before I can trust anyone with the lens."
+        ],
+        "quest": "quest.restore_beacon"
+      },
+      "npc.bandit_leader_karg": {
+        "name": "Bandit Leader Karg",
+        "description": "The dangerous leader of a small forest band.",
+        "role": "enemy",
+        "room": "loc.bandit_camp",
+        "stats": {
+          "hp": 70,
+          "max_hp": 70,
+          "damage": 13
+        },
+        "dialogue": [
+          "Your coin or your life. I'll take both."
+        ],
+        "drops": [
+          "item.bandit_dagger"
+        ]
+      },
+      "npc.bandit_scout": {
+        "name": "Bandit Scout",
+        "description": "A lookout watching the forest road.",
+        "role": "enemy",
+        "room": "loc.forest_road",
+        "stats": {
+          "hp": 35,
+          "max_hp": 35,
+          "damage": 7
+        },
+        "dialogue": [
+          "Halt! The road belongs to Karg now."
+        ]
+      },
+      "npc.cave_stalker": {
+        "name": "Cave Stalker",
+        "description": "A hostile creature living in the deeper caverns.",
+        "role": "enemy",
+        "room": "loc.deep_cave",
+        "stats": {
+          "hp": 60,
+          "max_hp": 60,
+          "damage": 12
+        },
+        "dialogue": [
+          "A low hiss echoes from the dark."
+        ]
+      },
+      "npc.giant_sewer_rat": {
+        "name": "Giant Sewer Rat",
+        "description": "An unusually large and aggressive rat.",
+        "role": "enemy",
+        "room": "loc.flooded_sewer",
+        "stats": {
+          "hp": 25,
+          "max_hp": 25,
+          "damage": 5
+        },
+        "dialogue": [
+          "It squeaks furiously and bares its teeth."
+        ]
+      },
+      "npc.ruined_guardian": {
+        "name": "Ruined Guardian",
+        "description": "An ancient construct protecting the undercity ruins.",
+        "role": "enemy",
+        "room": "loc.undercity_ruins",
+        "stats": {
+          "hp": 90,
+          "max_hp": 90,
+          "damage": 15
+        },
+        "dialogue": [
+          "INTRUDER. THE UNDERCITY SLEEPS."
+        ]
+      },
+      "npc.vault_sentinel": {
+        "name": "Vault Sentinel",
+        "description": "The final guardian standing before the ancient vault.",
+        "role": "enemy",
+        "room": "loc.ancient_vault",
+        "stats": {
+          "hp": 120,
+          "max_hp": 120,
+          "damage": 18
+        },
+        "dialogue": [
+          "None shall break the seal."
+        ],
+        "drops": [
+          "item.ancient_relic"
+        ]
+      }
+    },
+    "quests": {
+      "quest.herbal_remedy": {
+        "name": "Herbal Remedy",
+        "giver": "npc.healer_aria",
+        "description": "Collect Healing Herbs and deliver them to Healer Aria.",
+        "objectives": [
+          {
+            "type": "obtain_item",
+            "item": "item.healing_herbs"
+          },
+          {
+            "type": "talk_to",
+            "npc": "npc.healer_aria"
+          }
+        ],
+        "rewards": [
+          "item.novaris_coins",
+          "item.healers_potion"
+        ]
+      },
+      "quest.forge_supplies": {
+        "name": "Forge Supplies",
+        "giver": "npc.blacksmith_borin",
+        "description": "Recover the Blacksmith Hammer from the abandoned warehouse area.",
+        "objectives": [
+          {
+            "type": "obtain_item",
+            "item": "item.blacksmith_hammer"
+          },
+          {
+            "type": "talk_to",
+            "npc": "npc.blacksmith_borin"
+          }
+        ],
+        "rewards": [
+          "item.guard_sword",
+          "item.novaris_coins"
+        ]
+      },
+      "quest.smugglers_manifest": {
+        "name": "Smugglers Manifest",
+        "giver": "npc.dockmaster_ren",
+        "description": "Defeat Vex and recover the Smugglers' Manifest.",
+        "objectives": [
+          {
+            "type": "defeat_npc",
+            "npc": "npc.smuggler_vex"
+          },
+          {
+            "type": "obtain_item",
+            "item": "item.smugglers_manifest"
+          },
+          {
+            "type": "talk_to",
+            "npc": "npc.dockmaster_ren"
+          }
+        ],
+        "rewards": [
+          "item.warehouse_key",
+          "item.novaris_coins"
+        ]
+      },
+      "quest.lost_archive": {
+        "name": "The Lost Archive",
+        "giver": "npc.librarian_ves",
+        "description": "Find the Old Map and the Library Note, then return to Librarian Ves.",
+        "objectives": [
+          {
+            "type": "obtain_item",
+            "item": "item.old_map"
+          },
+          {
+            "type": "obtain_item",
+            "item": "item.library_note"
+          },
+          {
+            "type": "talk_to",
+            "npc": "npc.librarian_ves"
+          }
+        ],
+        "rewards": [
+          "item.crypt_key",
+          "item.novaris_coins"
+        ]
+      },
+      "quest.restore_beacon": {
+        "name": "Restore the Beacon",
+        "giver": "npc.lighthouse_keeper_ira",
+        "description": "Bring a Crystal Shard to Keeper Ira to help repair the lighthouse.",
+        "objectives": [
+          {
+            "type": "obtain_item",
+            "item": "item.crystal_shard"
+          },
+          {
+            "type": "talk_to",
+            "npc": "npc.lighthouse_keeper_ira"
+          }
+        ],
+        "rewards": [
+          "item.mysterious_orb",
+          "item.novaris_coins"
+        ],
+        "requires": [
+          "quest.smugglers_manifest"
+        ]
+      },
+      "quest.bread_delivery": {
+        "name": "Bread for the Captain",
+        "giver": "npc.baker_toma",
+        "description": "Take a loaf of Fresh Bread from the bakery and deliver it to Captain Elian in the barracks.",
+        "objectives": [
+          {
+            "type": "obtain_item",
+            "item": "item.fresh_bread"
+          },
+          {
+            "type": "talk_to",
+            "npc": "npc.captain_elian"
+          }
+        ],
+        "rewards": [
+          "item.novaris_coins"
+        ]
+      }
+    }
+  }
+}
